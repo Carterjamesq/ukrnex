@@ -1,11 +1,13 @@
 [build]
-  command = "EXPO_PUBLIC_API_URL=${EXPO_PUBLIC_API_URL:-$URL} npm run build:netlify"
+  command = "npm run build:netlify"
   publish = "apps/mobile/dist"
   functions = "netlify/functions"
 
 [build.environment]
   NODE_VERSION = "20"
   NPM_FLAGS = "--legacy-peer-deps"
+  CI = "true"
+  EXPO_NO_TELEMETRY = "1"
 
 [functions]
   node_bundler = "esbuild"

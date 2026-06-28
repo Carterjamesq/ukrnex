@@ -41,9 +41,13 @@ git push origin main
 
 | Setting | Value |
 |---------|-------|
+| Branch to deploy | `master` |
 | Build command | `npm run build:netlify` |
 | Publish directory | `apps/mobile/dist` |
 | Functions directory | `netlify/functions` |
+
+> If Netlify defaults to `main`, change **Branch to deploy** to `master` in  
+> **Site configuration → Build & deploy → Continuous deployment**.
 
 5. Click **Deploy site** (first deploy may fail until env vars are set — that is normal)
 

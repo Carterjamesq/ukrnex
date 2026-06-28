@@ -10,7 +10,7 @@
     "api": "npm run dev --workspace @ukrnex/api",
     "dev": "concurrently \"npm run api\" \"npm run mobile\"",
     "build:web": "npm run export:web --workspace @ukrnex/mobile",
-    "build:netlify": "npm run export:web --workspace @ukrnex/mobile",
+    "build:netlify": "node ./scripts/netlify-build.mjs",
     "typecheck": "npm run typecheck --workspaces --if-present"
   },
   "devDependencies": {
